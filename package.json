@@ -1,0 +1,11 @@
+{
+  "name": "auroro_grove_bootstrap",
+  "version": "1.0.0",
+  "description": "made via Bootstrap 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
