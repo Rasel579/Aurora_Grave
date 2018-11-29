@@ -22,19 +22,19 @@
        <div class="collapse navbar-collapse" id ="mainNavBar">
            <ul class="navbar-nav ml-auto">
                <li class="nav-item">
-                   <a href="#" class="nav-link">Home</a>
+                   <a href="#showcase" class="nav-link">Home</a>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link">About</a>
+                   <a href="#icons" class="nav-link">About</a>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link">Explore</a>
+                   <a href="#explore" class="nav-link">Explore</a>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link">Contact</a>
+                   <a href="#newsletter" class="nav-link">Contact</a>
                </li>
                <li class="nav-item">
-                   <a href="#" class="nav-link">Book</a>
+                   <a href="#" class="nav-link" data-toggle = "modal" data-target = "#bookingModal">Book</a>
                </li>
            </ul>
        </div>
@@ -45,11 +45,11 @@
             <h3 class="display-5 mb-0">MODERN CAMPING</h3>
             <h1 class="display-1">AURORA GROVE</h1>
             <p class="lead d-none d-md-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, consectetur.</p>
-            <button id = "book" class="btn btn-primary btn-lg px-5">BOOK NOW</button>
+            <button id = "book" class="btn btn-primary btn-lg px-5" data-toggle = "modal" data-target = "#bookingModal">BOOK NOW</button>
         </div>
     </section>
     <section>
-        <div class="container text-center mt-5">
+        <div id = "icons" class="container text-center mt-5">
             <h2>YOU SHOW UP, WE PITCH THE TENT.</h2>
             <div class="row">
                 <div class="col-md-4 p-3">
@@ -71,7 +71,7 @@
         </div>
     </section>
 
-    <section>
+    <section id = "explore">
         <div class="container text-center mt-2 p-3">
             <h3>WE'VE CREATED A CAMPING EXPIRIENCE THAT'S TURN-KEY AND HASSLE FREE</h3>
             <div class="row m-2">
@@ -166,7 +166,7 @@
         </div>
     </section>
 
-    <section>
+    <section id = "faq">
         <div class="container text-center mt-5">
            <h3>WHAT OTHERS ARE SAYING</h3>
            <h5 class="text-primary">#AURORAGROVE</h5>
@@ -209,7 +209,7 @@
         </div>
     </section>
 
-    <section class = "bg-dark">
+    <section id = "newsletter" class = "bg-dark">
         <div class="container text-white text-center py-5">
             <p class="lead">JOIN OUR NEWSLETTER FOR DEALS AND UPDATES</p>
             <div class="row justify-content-center">
@@ -230,23 +230,73 @@
     <section id = "footer" class ="bg-secondary p-3">
         <ul class="nav text-center justify-content-center flex-column flex-sm-row">
             <li class="nav-item">
-                <a href="#" class="nav-link text-white">FAQ</a>
+                <a href="#faq" class="nav-link text-white">FAQ</a>
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link text-white">EXPIRIENCE</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-white">EXPLORE</a>
+                <a href="#explore" class="nav-link text-white">EXPLORE</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-white">CONTACT</a>
+                <a href="#icons" class="nav-link text-white">CONTACT</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link text-white">BOOK NOW</a>
+                <a href="#" class="nav-link text-white" data-toggle = "modal" data-target = "#bookingModal">BOOK NOW</a>
             </li>
         </ul>
 
     </section>
+
+
+
+    <div class="modal" tabindex = "-1" role = "dialog" id ="bookingModal">
+        <div class="modal-dialog" role = "document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class = "modal-title">New Booking</h5>
+                    <button type = "button" class = "close" data-dismiss = "modal" aria-label = "close">
+                        <span aria-hidden = "true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur laboriosam ut voluptates adipisci.</p>
+                        <form action="">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id = "email" class="form-control" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="adults">Number of Adults</label>
+                                    <select class = "form-control" id="adults">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="childrens">Number of Childrens</label>
+                                    <select class = "form-control" id="childrens">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="requests">Additional Requests</label>
+                                    <textarea name="requests" id="requests" rows="3" class="form-control"></textarea>
+                                </div>
+                       </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Submit Request</button>
+                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
         
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
